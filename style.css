@@ -71,7 +71,7 @@ main {
   flex-direction: column;
   justify-content: flex-end;
   height: 382px;
-  background-image: url(/Profile_Card_Component/assets/bg-pattern-card.svg);
+  background-image: url('assets/bg-pattern-card.svg');
   background-repeat: no-repeat;
   background-size: 100%;
   background-color: white;
