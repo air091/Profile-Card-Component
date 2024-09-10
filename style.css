@@ -1,0 +1,152 @@
+:root {
+  --primaryDarkCyan: hsl(185, 75%, 39%);
+  --primaryVeryDarkDesaturatedBlue: hsl(229, 23%, 23%);
+  --primaryDarkGrayishBlue: hsl(227, 10%, 46%);
+
+  --neutralDarkGray: hsl(0, 0%, 59%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  background-color: var(--primaryDarkCyan);
+}
+
+img {
+  display: block;
+  object-fit: cover;
+}
+
+.pattern-top-container {
+  position: fixed;
+  top: -365px;
+  left: -310px;
+  width: 978px;
+  height: 978px;
+  z-index: -1;
+}
+
+.pattern-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotate(50deg);
+  opacity: 0.5;
+}
+
+.pattern-bottom-container {
+  position: fixed;
+  bottom: -450px;
+  right: -295px;
+  width: 978px;
+  height: 978px;
+  z-index: -1;
+}
+
+.pattern-bottom {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  /* bottom: -60%;
+  right: -5%; 
+  width: 700px; */
+}
+
+main {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 400px;
+  background-image: url(/Profile_Card_Component/assets/bg-pattern-card.svg);
+  background-repeat: no-repeat;
+  background-size: fit;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 12px 16px hsla(229, 23%, 23%, 0.15);
+}
+
+.ro1 .profile-info {
+  text-align: center;
+}
+
+.ro1 .profile-info .profile-img {
+  border-radius: 50%;
+  margin: 0 auto;
+  border: 6px solid white;
+}
+
+.ro1 .profile-info .profile-name {
+  font-weight: 700;
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.ro1 .profile-info .profile-age {
+  font-weight: 400;
+  color: var(--neutralDarkGray);
+}
+
+.ro1 .profile-info .profile-location {
+  display: block;
+  margin-bottom: 28px;
+  color: var(--neutralDarkGray);
+}
+
+main .ro2 {
+  display: flex;
+  width: 100%;
+  border-top: 1px solid hsla(0, 0%, 59%, 0.5);
+}
+
+.ro2 .followers,
+.ro2 .likes,
+.ro2 .photos {
+  text-align: center;
+  padding: 26px;
+}
+
+.followers-counter,
+.likes-counter,
+.photos-counter {
+  font-size: 18px;
+  font-weight: 800;
+  margin: 0;
+}
+
+.ro2 .txt {
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: var(--neutralDarkGray);
+}
+
+
+@media screen and (max-width: 375px) {
+  body {
+    padding: 20px;
+  }
+
+  .pattern-top-container {
+    top: -565px;
+    left: -770px;
+  }
+
+  .pattern-bottom-container {
+    /* display: none; */
+    bottom: -550px;
+    right: -777px;
+  }
+}
